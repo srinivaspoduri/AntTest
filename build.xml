@@ -37,13 +37,13 @@
 	<!-- Runs the file and generates Reportng report for TestNG-->
 	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="classpath" />
 	
-	<target name="TESTNG1 EXECUTION" depends="compile">
+	<target name="TESTNG1_EXECUTION" depends="compile">
 		<mkdir dir="${testng-report-dir}" />
 		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="false">
 			<xmlfileset dir="${basedir}" includes="TestNG.xml" />
 		</testng>
 	</target>
-	<target name="TESTNG2 EXECUTION" depends="compile">
+	<target name="TESTNG2_EXECUTION" depends="compile">
 			<mkdir dir="${testng-report-dir}" />
 			<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="false">
 				<xmlfileset dir="${basedir}" includes="TestNG1.xml" />
